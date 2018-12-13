@@ -1,0 +1,55 @@
+[class*='btn-'] {
+    font-family: $head-ff;
+    font-size: 1.2rem;
+    display: inline-block;
+    padding: 1rem 2rem;
+    color: $white;
+    border-radius: .5rem;
+    cursor: pointer;
+    &.disabled {
+        cursor: not-allowed;
+        background-color: $grey;
+    }
+    &.btn-xs {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+    &.btn-xl {
+        font-size: 1.6rem;
+    }
+    + [class*='btn-'] {
+        margin-left: 1rem;
+    }
+}
+@each $class, $color in $var-colors {
+    .btn-#{$class} {
+        background-color: $color;
+        @if (saturation($color) > 95 or $class == "white") {
+            color: $black;
+        }
+        @if ($class == "white") {
+            border: 1px solid $blue;
+        }
+    }
+    .btn-#{$class}:not(.disabled) {
+        &:hover {
+            background-color: darken($color, 10%);
+            @if (saturation($color) > 95 or $class == "white") {
+                color: $black;
+            } @else {
+                color: $white;
+            }
+        }
+    }
+}
+// Button color theme
+@each $class, $color in $var-color-theme {
+    .btn-#{$class} {
+        background-color: $color;
+        @if (saturation($color) > 90) {
+            color: $black;
+        } @else {
+            color: $white;
+        }
+    }
+}

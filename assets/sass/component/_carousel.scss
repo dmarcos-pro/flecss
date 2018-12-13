@@ -1,0 +1,60 @@
+.owl-carousel {
+    position: relative;
+    .owl-nav {
+        @media (max-width: $desktop) {
+            margin-top: $gutter;
+            text-align: center;
+        }
+        .owl-prev, .owl-next {
+            width: 5rem;
+            height: 5rem;
+            text-align: center;
+            line-height: 5rem;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 3rem;
+            background-color: $third-color;
+            color: $white;
+            @media (max-width: $desktop) {
+                position: static;
+                display: inline-block;
+                transform: none;
+            }
+            &.disabled {
+                opacity: .3;
+                cursor: not-allowed;
+            }
+        }
+        .owl-prev {
+            left: -8rem;
+        }
+        .owl-next {
+            right: -8rem;
+            @media (max-width: $desktop) {
+                margin-left: $gutter;
+            }
+        }
+    }
+    .owl-dots {
+        text-align: center;
+        @media (max-width: $desktop) {
+            display: none;
+        }
+        .owl-dot {
+            width: 1rem;
+            height: 1rem;
+            background-color: $third-color;
+            display: inline-block;
+            border-radius: 50%;
+            opacity: .5;
+            + .owl-dot {
+                margin-left: 1rem;
+            }
+            &.active {
+                opacity: 1;
+            }
+        }
+    }
+}

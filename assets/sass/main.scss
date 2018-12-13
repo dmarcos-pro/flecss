@@ -1,0 +1,25 @@
+// Import config scss
+@import 'config/var';
+@import 'config/mixin';
+@import 'config/animation';
+
+// Import layout scss
+@import 'layout/grid';
+@import 'layout/placeholder';
+@import 'layout/layout';
+
+// Import font scss
+@import 'fonts/font';
+@import 'fonts/title';
+
+// Import utilities
+@import 'utilities/utilities';
+
+// Import component scss
+@import 'component/header';
+@import 'component/nav';
+@import 'component/buttons';
+@import 'component/form';
+@import 'component/popin';
+@import 'component/carousel';
+@import 'component/footer';
