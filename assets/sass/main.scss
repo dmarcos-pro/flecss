@@ -10,7 +10,6 @@
 
 // Import font scss
 @import 'fonts/font';
-@import 'fonts/title';
 
 // Import utilities
 @import 'utilities/utilities';
@@ -18,6 +17,7 @@
 // Import component scss
 @import 'component/header';
 @import 'component/nav';
+@import 'component/title';
 @import 'component/buttons';
 @import 'component/form';
 @import 'component/popin';

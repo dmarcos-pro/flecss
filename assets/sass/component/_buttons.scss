@@ -28,7 +28,7 @@
             color: $black;
         }
         @if ($class == "white") {
-            border: 1px solid $blue;
+            border: 1px solid $primary-color;
         }
     }
     .btn-#{$class}:not(.disabled) {
