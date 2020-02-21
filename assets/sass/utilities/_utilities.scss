@@ -1,48 +1,30 @@
-@each $class, $color in $var-colors {
-    .bgc-#{$class} {
-        background-color: $color;
+$margin-position: ('top': 't', 'right': 'r', 'bottom': 'b', 'left': 'l');
+@for $i from 1 through 10 {
+    .m-#{$i} {
+        margin: #{$i}rem;
     }
-    @for $i from 1 through 4 {
-        $pourcent: 5% * $i;
-        .bgcolor-light#{$class}#{$i} {
-            background-color: lighten($color, $pourcent);
-        }
-        .bgcolor-dark#{$class}#{$i} {
-            background-color: darken($color, $pourcent);
+    @each $position, $class in $margin-position {
+        .m#{$class}-#{$i} {
+            margin-#{$position}: #{$i}rem;
         }
     }
 }
-/* Global Class */
-.clearfix {
-    @extend %clearfix;
-}
-.wrapper {
-    width: calc(100% - (#{$gutter} * 2));
-    max-width: $wrapper;
-    margin: $gutter * 2 auto 0 auto;
-    &:first-child {
-        margin-top: 0;
+
+$padding-position: ('top': 't', 'right': 'r', 'bottom': 'b', 'left': 'l');
+@for $i from 1 through 10 {
+    .p-#{$i} {
+        padding: #{$i}rem;
+    }
+    @each $position, $class in $padding-position {
+        .p#{$class}-#{$i} {
+            padding-#{$position}: #{$i}rem;
+        }
     }
 }
-.txt-center {
-    text-align: center;
-}
-.txt-right {
-    text-align: right;
-}
-.txt-left {
-    text-align: left;
-}
-.hide {
-    display: none;
-}
-.element-fixed {
-    position: fixed;
-    z-index: $zi-basic;
-    top: 0;
-    left: 0;
-    width: 100%;
-}
-[class*='error'] {
-    color: $error;
+
+$var-positions: center, right, left;
+@each $position in $var-positions {
+    .txt-#{$position} {
+        text-align: $position;
+    }
 }

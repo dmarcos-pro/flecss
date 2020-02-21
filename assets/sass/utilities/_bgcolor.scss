@@ -1,0 +1,14 @@
+@each $class, $color in $var-colors {
+    .bgc-#{$class} {
+        background-color: $color;
+    }
+    @for $i from 1 through 4 {
+        $pourcent: 5% * $i;
+        .bgc-#{$class}--light#{$i} {
+            background-color: lighten($color, $pourcent);
+        }
+        .bgc-#{$class}--dark#{$i} {
+            background-color: darken($color, $pourcent);
+        }
+    }
+}

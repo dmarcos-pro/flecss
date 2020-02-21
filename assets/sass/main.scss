@@ -1,7 +1,11 @@
 // Import config scss
-@import 'config/var';
+@import 'config/var-breakpoint';
+@import 'config/var-color';
+@import 'config/var-colortheme';
+@import 'config/var-font';
+@import 'config/var-grid';
+@import 'config/var-others';
 @import 'config/mixin';
-@import 'config/animation';
 
 // Import layout scss
 @import 'layout/grid';
@@ -12,14 +16,12 @@
 @import 'fonts/font';
 
 // Import utilities
+@import 'utilities/bgcolor';
 @import 'utilities/utilities';
+@import 'utilities/animation';
 
 // Import component scss
-@import 'component/header';
-@import 'component/nav';
-@import 'component/title';
 @import 'component/buttons';
 @import 'component/form';
 @import 'component/popin';
-@import 'component/carousel';
-@import 'component/footer';
+@import 'component/title';

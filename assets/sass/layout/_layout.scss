@@ -42,7 +42,7 @@ p a {
     }
 }
 strong {
-    font-family: $bold-base-ff;
+    font-family: $base-ff--bold;
 }
 ul,
 ol {
@@ -88,11 +88,20 @@ figure {
 section {
     padding: 5rem 0;
 }
-::after,
-::before {
-    content: '';
-}
 ::selection {
     background-color: $secondary-color;
     color: $base-color;
+}
+
+/* Global Class */
+.clearfix {
+    @extend %clearfix;
+}
+.wrapper {
+    width: calc(100% - (#{$gutter} * 2));
+    max-width: $wrapper;
+    margin: $gutter * 2 auto 0 auto;
+    &:first-child {
+        margin-top: 0;
+    }
 }

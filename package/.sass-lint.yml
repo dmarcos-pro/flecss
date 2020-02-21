@@ -16,7 +16,7 @@ rules:
     - exclude:
       - 'white-space'
       - 'font-size'
-  no-empty-rulesets: 1
+  no-empty-rulesets: 0
   no-ids: 1
   no-important: 1
 

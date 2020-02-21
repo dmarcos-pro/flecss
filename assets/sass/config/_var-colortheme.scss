@@ -1,0 +1,10 @@
+// Colors Config Theme
+$primary-color: $blue;
+$secondary-color: $yellow;
+$third-color: $pink;
+
+$var-color-theme: (
+    'primary': $primary-color,
+    'secondary': $secondary-color,
+    'third': $third-color
+);

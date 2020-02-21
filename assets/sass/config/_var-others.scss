@@ -1,0 +1,9 @@
+// Path
+$path-font: '../font/';
+$path-img: '../img/';
+
+// Define z-index
+$zi-basic: 1;
+$zi-header: $zi-basic + 1;
+$zi-nav: $zi-header + 1;
+$zi-menu: $zi-nav + 1;

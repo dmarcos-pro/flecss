@@ -11,10 +11,6 @@ var rename       = require('gulp-rename');
 var minifycss    = require('gulp-minify-css');
 var autoprefixer = require('gulp-autoprefixer');
 var sassLint     = require('gulp-sass-lint');
-var babelify     = require('babelify');
-var browserify   = require('browserify');
-var source       = require('vinyl-source-stream');
-var eslint       = require('gulp-eslint');
 
 /**
  * inFolder  : Coding Folder

@@ -5,10 +5,10 @@
     transition: all .5s ease-in-out 0s;
     background-color: $white;
     box-shadow: 0 0 5px 0 $grey;
-    &.show {
+    &.open {
         bottom: 10rem;
     }
-    .head {
+    &-head {
         position: relative;
         padding: $gutter;
         background-color: darken($primary-color, 20%);
@@ -18,15 +18,15 @@
             text-transform: uppercase;
             font-family: $head-ff;
         }
-        .close {
-            position: absolute;
-            top: 50%;
-            right: $gutter;
-            transform: translateY(-50%);
-            cursor: pointer;
-        }
     }
-    aside {
+    .close {
+        position: absolute;
+        top: 50%;
+        right: $gutter;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+    &-content {
         padding: $gutter;
     }
 }
