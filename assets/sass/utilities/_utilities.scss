@@ -10,7 +10,12 @@ $margin-position: ('top': 't', 'right': 'r', 'bottom': 'b', 'left': 'l');
     }
 }
 
-$padding-position: ('top': 't', 'right': 'r', 'bottom': 'b', 'left': 'l');
+$padding-position: (
+    'top': 't',
+    'right': 'r',
+    'bottom': 'b',
+    'left': 'l'
+);
 @for $i from 1 through 10 {
     .p-#{$i} {
         padding: #{$i}rem;
