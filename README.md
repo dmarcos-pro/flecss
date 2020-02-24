@@ -11,6 +11,7 @@ FLECSS est couplé avec le préprocesseur SASS et Gulp, ce qui permet de compile
 
 J'ai conçu FLECSS au fur et à mesure de mes projets (sites internet) et il est aujourd'hui distribué librement sur Github. Toute contribution/amélioration est d'ailleurs la bienvenue.
 
-Quelques projets où FLECSS est implanté : Ooreka, YellowKorner, Zeinberg, Avigora, ...
+Quelques projets où FLECSS est implanté : Ooreka, YellowKorner, Zeinberg, ...
+De nouveaux projets, bientôt en ligne, verront également le jour avec FLECSS comme framework CSS.
 
 À venir : la documentation complète !
