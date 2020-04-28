@@ -1,7 +1,47 @@
-/**
- * YOUR IMPORT
- */
+// Import config scss
+@import 'config/breakpoint';
+@import 'config/color';
+@import 'config/colortheme';
+@import 'config/component';
+@import 'config/content';
+@import 'config/grid';
 
-// import flecss framework
-@import '../../flecss-framework/flecss';
+// Import layout scss
+@import 'layout/mixin';
+@import 'layout/placeholder';
+@import 'layout/grid';
+@import 'layout/reset';
 
+// Import content scss
+@import 'content/font_family';
+@import 'content/blockquote';
+@import 'content/cite';
+@import 'content/form';
+@import 'content/img';
+@import 'content/list';
+@import 'content/note';
+@import 'content/pre';
+@import 'content/table';
+@import 'content/text';
+@import 'content/title';
+@import 'content/video';
+
+// Import component scss
+@import 'component/badge';
+@import 'component/breadcrumbs';
+@import 'component/btn';
+@import 'component/card';
+@import 'component/icon';
+@import 'component/nav';
+@import 'component/pagination';
+@import 'component/parallax';
+@import 'component/popin';
+@import 'component/progressbar';
+@import 'component/sticky';
+@import 'component/switch';
+@import 'component/tabs';
+
+// Import utilities
+@import 'utilities/color';
+@import 'utilities/spacing';
+@import 'utilities/animation';
