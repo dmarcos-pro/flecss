@@ -1,0 +1,76 @@
+@for $i from 1 through 10 {
+    .m-#{$i} {
+        margin: #{$i}rem;
+    }
+    @each $position, $class in $position {
+        .m#{$class}-#{$i} {
+            margin-#{$position}: #{$i}rem;
+        }
+    }
+}
+@for $i from 1 through 10 {
+    .p-#{$i} {
+        padding: #{$i}rem;
+    }
+    @each $position, $class in $position {
+        .p#{$class}-#{$i} {
+            padding-#{$position}: #{$i}rem;
+        }
+    }
+}
+
+@each $position in $align-positions {
+    .txt-#{$position} {
+        text-align: $position;
+    }
+}
+
+@each $position in $float-positions {
+    .float-#{$position} {
+        float: $position;
+    }
+}
+
+.hide { display: none; }
+.show { display: block; }
+
+@each $class, $device, $previousDevice in $var-device-and-previous {
+    .show-for-#{$class} {
+        display: none;
+        @media (max-width: $device) {
+            display: block;
+        }
+        &--only {
+            display: none;
+            @media (min-width: $previousDevice + 1) and (max-width: $device) {
+                display: block;
+            }
+        }
+    }
+    .hide-for-#{$class} {
+        display: block;
+        @media (max-width: $device) {
+            display: none;
+        }
+        &--only {
+            display: block;
+            @media (min-width: $previousDevice + 1) and (max-width: $device) {
+                display: none;
+            }
+        }
+    }
+}
+
+.txt-sm {
+    font-size: .8em;
+}
+.txt-xl {
+    font-size: 1.2em;
+}
+
+.border {
+    border: 1px solid $grey;
+}
+.radius {
+    border-radius: 3px;
+}

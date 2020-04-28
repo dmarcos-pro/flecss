@@ -1,0 +1,205 @@
+// Define Colors
+$white             : #ffffff !default;
+$off-white         : #f7f7f7 !default;
+$black             : #333333 !default;
+$grey              : #dddddd !default;
+$blue              : #324F6C !default;
+$skyblue           : #5799b8 !default;
+$bluegrey          : #586076 !default;
+$red               : #d63447 !default;
+$lightgreen        : #abbd87 !default;
+$green             : #4e9648 !default;
+$teal              : #00796b !default;
+$yellow            : #ebb844 !default;
+$orange            : #ee6a42 !default;
+$deeppurple        : #503f66 !default;
+$purple            : #631C84 !default;
+$brown             : #795548 !default;
+$darkpink          : #d92149 !default;
+$salmon            : #fa6c6c !default;
+$pink              : #ffbcbc !default;
+
+// Lighten or darken by color
+$var-pourcentcolor : 3% !default;
+
+$black_light1      : lighten($black, $var-pourcentcolor) !default;
+$black_light2      : lighten($black, $var-pourcentcolor*2) !default;
+$black_light3      : lighten($black, $var-pourcentcolor*3) !default;
+$black_light4      : lighten($black, $var-pourcentcolor*4) !default;
+$black_dark1       : darken($black, $var-pourcentcolor) !default;
+$black_dark2       : darken($black, $var-pourcentcolor*2) !default;
+$black_dark3       : darken($black, $var-pourcentcolor*3) !default;
+$black_dark4       : darken($black, $var-pourcentcolor*4) !default;
+
+$grey_light1       : lighten($grey, $var-pourcentcolor) !default;
+$grey_light2       : lighten($grey, $var-pourcentcolor*2) !default;
+$grey_light3       : lighten($grey, $var-pourcentcolor*3) !default;
+$grey_light4       : lighten($grey, $var-pourcentcolor*4) !default;
+$grey_dark1        : darken($grey, $var-pourcentcolor) !default;
+$grey_dark2        : darken($grey, $var-pourcentcolor*2) !default;
+$grey_dark3        : darken($grey, $var-pourcentcolor*3) !default;
+$grey_dark4        : darken($grey, $var-pourcentcolor*4) !default;
+
+$blue_light1       : lighten($blue, $var-pourcentcolor) !default;
+$blue_light2       : lighten($blue, $var-pourcentcolor*2) !default;
+$blue_light3       : lighten($blue, $var-pourcentcolor*3) !default;
+$blue_light4       : lighten($blue, $var-pourcentcolor*4) !default;
+$blue_dark1        : darken($blue, $var-pourcentcolor) !default;
+$blue_dark2        : darken($blue, $var-pourcentcolor*2) !default;
+$blue_dark3        : darken($blue, $var-pourcentcolor*3) !default;
+$blue_dark4        : darken($blue, $var-pourcentcolor*4) !default;
+
+$skyblue_light1    : lighten($skyblue, $var-pourcentcolor) !default;
+$skyblue_light2    : lighten($skyblue, $var-pourcentcolor*2) !default;
+$skyblue_light3    : lighten($skyblue, $var-pourcentcolor*3) !default;
+$skyblue_light4    : lighten($skyblue, $var-pourcentcolor*4) !default;
+$skyblue_dark1     : darken($skyblue, $var-pourcentcolor) !default;
+$skyblue_dark2     : darken($skyblue, $var-pourcentcolor*2) !default;
+$skyblue_dark3     : darken($skyblue, $var-pourcentcolor*3) !default;
+$skyblue_dark4     : darken($skyblue, $var-pourcentcolor*4) !default;
+
+$bluegrey_light1   : lighten($bluegrey, $var-pourcentcolor) !default;
+$bluegrey_light2   : lighten($bluegrey, $var-pourcentcolor*2) !default;
+$bluegrey_light3   : lighten($bluegrey, $var-pourcentcolor*3) !default;
+$bluegrey_light4   : lighten($bluegrey, $var-pourcentcolor*4) !default;
+$bluegrey_dark1    : darken($bluegrey, $var-pourcentcolor) !default;
+$bluegrey_dark2    : darken($bluegrey, $var-pourcentcolor*2) !default;
+$bluegrey_dark3    : darken($bluegrey, $var-pourcentcolor*3) !default;
+$bluegrey_dark4    : darken($bluegrey, $var-pourcentcolor*4) !default;
+
+$red_light1        : lighten($red, $var-pourcentcolor) !default;
+$red_light2        : lighten($red, $var-pourcentcolor*2) !default;
+$red_light3        : lighten($red, $var-pourcentcolor*3) !default;
+$red_light4        : lighten($red, $var-pourcentcolor*4) !default;
+$red_dark1         : darken($red, $var-pourcentcolor) !default;
+$red_dark2         : darken($red, $var-pourcentcolor*2) !default;
+$red_dark3         : darken($red, $var-pourcentcolor*3) !default;
+$red_dark4         : darken($red, $var-pourcentcolor*4) !default;
+
+$lightgreen_light1 : lighten($lightgreen, $var-pourcentcolor) !default;
+$lightgreen_light2 : lighten($lightgreen, $var-pourcentcolor*2) !default;
+$lightgreen_light3 : lighten($lightgreen, $var-pourcentcolor*3) !default;
+$lightgreen_light4 : lighten($lightgreen, $var-pourcentcolor*4) !default;
+$lightgreen_dark1  : darken($lightgreen, $var-pourcentcolor) !default;
+$lightgreen_dark2  : darken($lightgreen, $var-pourcentcolor*2) !default;
+$lightgreen_dark3  : darken($lightgreen, $var-pourcentcolor*3) !default;
+$lightgreen_dark4  : darken($lightgreen, $var-pourcentcolor*4) !default;
+
+$green_light1      : lighten($green, $var-pourcentcolor) !default;
+$green_light2      : lighten($green, $var-pourcentcolor*2) !default;
+$green_light3      : lighten($green, $var-pourcentcolor*3) !default;
+$green_light4      : lighten($green, $var-pourcentcolor*4) !default;
+$green_dark1       : darken($green, $var-pourcentcolor) !default;
+$green_dark2       : darken($green, $var-pourcentcolor*2) !default;
+$green_dark3       : darken($green, $var-pourcentcolor*3) !default;
+$green_dark4       : darken($green, $var-pourcentcolor*4) !default;
+
+$teal_light1       : lighten($teal, $var-pourcentcolor) !default;
+$teal_light2       : lighten($teal, $var-pourcentcolor*2) !default;
+$teal_light3       : lighten($teal, $var-pourcentcolor*3) !default;
+$teal_light4       : lighten($teal, $var-pourcentcolor*4) !default;
+$teal_dark1        : darken($teal, $var-pourcentcolor) !default;
+$teal_dark2        : darken($teal, $var-pourcentcolor*2) !default;
+$teal_dark3        : darken($teal, $var-pourcentcolor*3) !default;
+$teal_dark4        : darken($teal, $var-pourcentcolor*4) !default;
+
+$yellow_light1     : lighten($yellow, $var-pourcentcolor) !default;
+$yellow_light2     : lighten($yellow, $var-pourcentcolor*2) !default;
+$yellow_light3     : lighten($yellow, $var-pourcentcolor*3) !default;
+$yellow_light4     : lighten($yellow, $var-pourcentcolor*4) !default;
+$yellow_dark1      : darken($yellow, $var-pourcentcolor) !default;
+$yellow_dark2      : darken($yellow, $var-pourcentcolor*2) !default;
+$yellow_dark3      : darken($yellow, $var-pourcentcolor*3) !default;
+$yellow_dark4      : darken($yellow, $var-pourcentcolor*4) !default;
+
+$orange_light1     : lighten($orange, $var-pourcentcolor) !default;
+$orange_light2     : lighten($orange, $var-pourcentcolor*2) !default;
+$orange_light3     : lighten($orange, $var-pourcentcolor*3) !default;
+$orange_light4     : lighten($orange, $var-pourcentcolor*4) !default;
+$orange_dark1      : darken($orange, $var-pourcentcolor) !default;
+$orange_dark2      : darken($orange, $var-pourcentcolor*2) !default;
+$orange_dark3      : darken($orange, $var-pourcentcolor*3) !default;
+$orange_dark4      : darken($orange, $var-pourcentcolor*4) !default;
+
+$deeppurple_light1 : lighten($deeppurple, $var-pourcentcolor) !default;
+$deeppurple_light2 : lighten($deeppurple, $var-pourcentcolor*2) !default;
+$deeppurple_light3 : lighten($deeppurple, $var-pourcentcolor*3) !default;
+$deeppurple_light4 : lighten($deeppurple, $var-pourcentcolor*4) !default;
+$deeppurple_dark1  : darken($deeppurple, $var-pourcentcolor) !default;
+$deeppurple_dark2  : darken($deeppurple, $var-pourcentcolor*2) !default;
+$deeppurple_dark3  : darken($deeppurple, $var-pourcentcolor*3) !default;
+$deeppurple_dark4  : darken($deeppurple, $var-pourcentcolor*4) !default;
+
+$purple_light1     : lighten($purple, $var-pourcentcolor) !default;
+$purple_light2     : lighten($purple, $var-pourcentcolor*2) !default;
+$purple_light3     : lighten($purple, $var-pourcentcolor*3) !default;
+$purple_light4     : lighten($purple, $var-pourcentcolor*4) !default;
+$purple_dark1      : darken($purple, $var-pourcentcolor) !default;
+$purple_dark2      : darken($purple, $var-pourcentcolor*2) !default;
+$purple_dark3      : darken($purple, $var-pourcentcolor*3) !default;
+$purple_dark4      : darken($purple, $var-pourcentcolor*4) !default;
+
+$brown_light1      : lighten($brown, $var-pourcentcolor) !default;
+$brown_light2      : lighten($brown, $var-pourcentcolor*2) !default;
+$brown_light3      : lighten($brown, $var-pourcentcolor*3) !default;
+$brown_light4      : lighten($brown, $var-pourcentcolor*4) !default;
+$brown_dark1       : darken($brown, $var-pourcentcolor) !default;
+$brown_dark2       : darken($brown, $var-pourcentcolor*2) !default;
+$brown_dark3       : darken($brown, $var-pourcentcolor*3) !default;
+$brown_dark4       : darken($brown, $var-pourcentcolor*4) !default;
+
+$darkpink_light1   : lighten($darkpink, $var-pourcentcolor) !default;
+$darkpink_light2   : lighten($darkpink, $var-pourcentcolor*2) !default;
+$darkpink_light3   : lighten($darkpink, $var-pourcentcolor*3) !default;
+$darkpink_light4   : lighten($darkpink, $var-pourcentcolor*4) !default;
+$darkpink_dark1    : darken($darkpink, $var-pourcentcolor) !default;
+$darkpink_dark2    : darken($darkpink, $var-pourcentcolor*2) !default;
+$darkpink_dark3    : darken($darkpink, $var-pourcentcolor*3) !default;
+$darkpink_dark4    : darken($darkpink, $var-pourcentcolor*4) !default;
+
+$salmon_light1     : lighten($salmon, $var-pourcentcolor) !default;
+$salmon_light2     : lighten($salmon, $var-pourcentcolor*2) !default;
+$salmon_light3     : lighten($salmon, $var-pourcentcolor*3) !default;
+$salmon_light4     : lighten($salmon, $var-pourcentcolor*4) !default;
+$salmon_dark1      : darken($salmon, $var-pourcentcolor) !default;
+$salmon_dark2      : darken($salmon, $var-pourcentcolor*2) !default;
+$salmon_dark3      : darken($salmon, $var-pourcentcolor*3) !default;
+$salmon_dark4      : darken($salmon, $var-pourcentcolor*4) !default;
+
+$pink_light1       : lighten($pink, $var-pourcentcolor) !default;
+$pink_light2       : lighten($pink, $var-pourcentcolor*2) !default;
+$pink_light3       : lighten($pink, $var-pourcentcolor*3) !default;
+$pink_light4       : lighten($pink, $var-pourcentcolor*4) !default;
+$pink_dark1        : darken($pink, $var-pourcentcolor) !default;
+$pink_dark2        : darken($pink, $var-pourcentcolor*2) !default;
+$pink_dark3        : darken($pink, $var-pourcentcolor*3) !default;
+$pink_dark4        : darken($pink, $var-pourcentcolor*4) !default;
+
+// Var Color
+$var-colors : (
+    'white'        : $white,
+    'off-white'    : $off-white,
+    'black'        : $black,
+    'grey'         : $grey,
+    'blue'         : $blue,
+    'skyblue'      : $skyblue,
+    'bluegrey'     : $bluegrey,
+    'red'          : $red,
+    'lightgreen'   : $lightgreen,
+    'green'        : $green,
+    'teal'         : $teal,
+    'yellow'       : $yellow,
+    'orange'       : $orange,
+    'deeppurple'   : $deeppurple,
+    'purple'       : $purple,
+    'brown'        : $brown,
+    'darkpink'     : $darkpink,
+    'salmon'       : $salmon,
+    'pink'         : $pink
+) !default;
+
+// Colors Config Form
+$error             : $red !default;
+$warning           : $orange !default;
+$validate          : $green !default;
+$focus             : $blue !default;

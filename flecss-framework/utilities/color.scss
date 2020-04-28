@@ -1,0 +1,51 @@
+@each $class, $color in $var-color-theme {
+    .bgc-#{$class} {
+        background-color: $color;
+        @if (lightness($color) > 70) {
+            color: $black;
+        } @else {
+            color: $white;
+        }
+    }
+    .txt-#{$class} {
+        color: $color;
+    }
+}
+@each $class, $color in $var-colors {
+    .bgc-#{$class} {
+        background-color: $color;
+        @if (lightness($color) > 70) {
+            color: $black;
+        } @else {
+            color: $white;
+        }
+    }
+    .txt-#{$class} {
+        color: $color;
+    }
+    @for $i from 1 through 4 {
+        $pourcent: $var-pourcentcolor * $i;
+        .bgc-#{$class}_light#{$i} {
+            background-color: lighten($color, $pourcent);
+            @if (lightness($color) > 70) {
+                color: $black;
+            } @else {
+                color: $white;
+            }
+        }
+        .bgc-#{$class}_dark#{$i} {
+            background-color: darken($color, $pourcent);
+            @if (lightness($color) > 70) {
+                color: $black;
+            } @else {
+                color: $white;
+            }
+        }
+        .txt-#{$class}_light#{$i} {
+            color: lighten($color, $pourcent);;
+        }
+        .txt-#{$class}_dark#{$i} {
+            color: darken($color, $pourcent);;
+        }
+    }
+}

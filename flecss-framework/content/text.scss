@@ -1,0 +1,17 @@
+/* PARAGRAPH & LINK TAG */
+p {
+    @extend %content-space;
+    strong {
+        font-family: $base-ff--bold;
+    }
+}
+a {
+    cursor: pointer;
+    text-decoration: none;
+    @at-root p &, li & {
+        color: $secondary-color;
+    }
+}
+::selection {
+    @include bgc($selection-color);
+}

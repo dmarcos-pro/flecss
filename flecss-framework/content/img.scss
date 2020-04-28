@@ -1,0 +1,32 @@
+/* TAG FIGURE & IMAGE */
+figure {
+    position: relative;
+    @extend %content-space--xl;
+    img {
+        display: table;
+        width: 100%;
+        height: auto;
+    }
+    figcaption {
+        text-align: center;
+        font-size: .8em;
+        font-style: italic;
+        color: $grey;
+        margin-top: $space-content;
+        &.copyright {
+            margin-top: 0;
+            position: absolute;
+            top: auto;
+            right: auto;
+            bottom: 0;
+            left: 0;
+            padding: $space-content;
+            @include bgc(rgba(255, 255, 255, .5));
+            &.top {
+                bottom: auto;
+                left: 0;
+                top: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+/**
+ * --------------------------------------------
+ * SUMMARY
+ * --------------------------------------------
+ *      GLOBAL TITLE
+ *      RESPONSIVE TITLE
+ * --------------------------------------------
+ */
+
+/* GLOBAL TITLE */
+h1, h2, h3, h4, h5, h6 {
+    font-family: $head-ff;
+    line-height: $head-lh;
+    @extend %margin-title;
+}
+
+/* RESPONSIVE TITLE */
+@each $header, $size, $sizeDevice in $var-fontsize {
+    #{$header}, .#{$header} {
+        font-size: $size;
+        @media (max-width: $tablet) {
+            font-size: $sizeDevice;
+        }
+    }
+}

@@ -1,0 +1,16 @@
+@if ($parallax-component) {
+    .okok {
+        @include parallax('https://www.beckett.design/images/grafikdesign/glass1.png');
+    }
+    .oui {
+        @include parallax('http://localhost:8888/dmarcos/wp-content/uploads/2020/04/bulle.png');
+    }
+    .parallax {
+        position: relative;
+        background-attachment: fixed;
+        background-position: center 0;
+        background-repeat: no-repeat;
+        height: 80rem;
+        background-image: url('https://dmarcos.fr/wp-content/uploads/2018/11/dmarcos-fd-noir.gif');
+    }
+}

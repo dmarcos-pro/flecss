@@ -1,0 +1,12 @@
+// Breakpoint
+$desktop : 1400px !default;
+$laptop  : 1024px !default;
+$tablet  : 768px !default;
+$mobile  : 520px !default;
+
+$var-device-and-previous : (
+    'mobile'  $mobile  320px,
+    'tablet'  $tablet  $mobile,
+    'laptop'  $laptop  $tablet,
+    'desktop' $desktop $laptop
+) !default;

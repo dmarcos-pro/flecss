@@ -1,0 +1,189 @@
+@if ($btn-component) {
+    /**
+     * --------------------------------------------
+     * SUMMARY
+     * --------------------------------------------
+     *      TAG BUTTON
+     *      CLASS .BTN
+     *      CLASS .BTN-{COLOR}
+     *      CLASS .BTN-{COLOR-THEME}
+     *      DROPDOWN & HOVER BUTTON
+     * --------------------------------------------
+     */
+
+    /* TAG BUTTON */
+    button {
+        cursor: pointer;
+        padding: 0;
+        border: 0;
+    }
+
+    /* CLASS .BTN */
+    [class*='btn'] {
+        font-size: 1.2rem;
+        display: inline-block;
+        padding: 1.5rem 5rem;
+        color: $white;
+        border-radius: 5rem;
+        cursor: pointer;
+        text-transform: uppercase;
+        text-align: center;
+        background-color: $primary-color;
+        border: 1px solid $primary-color;
+        &:hover {
+            background-color: darken($primary-color, 5%);
+        }
+        &.disabled {
+            cursor: not-allowed;
+            background-color: $grey;
+        }
+        &.btn-xs {
+            font-size: 1rem;
+            padding: 1rem 3rem;
+        }
+        &.btn-xl {
+            font-size: 1.5rem;
+            padding: 2rem 7rem;
+        }
+        &.full {
+            width: 100%;
+        }
+        &.border {
+            background-color: transparent;
+            color: $base-color;
+        }
+        i {
+            margin-left: $space-content;
+        }
+    }
+
+    /* CLASS .BTN-{COLOR} */
+    @each $class, $color in $var-colors {
+        .btn-#{$class} {
+            background-color: $color;
+            border-color: $color;
+            @if (lightness($color) > 70 or $class == "white" or $class == "off-white") {
+                color: $base-color;
+            }
+            &.border {
+                background-color: transparent;
+                @if (lightness($color) > 70) {
+                    color: $base-color;
+                } @else {
+                    color: $color;
+                }
+            }
+        }
+        .btn-#{$class}:not(.disabled) {
+            &:hover {
+                @if ($class == "white" or $class == "off-white") {
+                    background-color: $primary-color;
+                } @else {
+                    background-color: darken($color, 5%);
+                }
+                @if (lightness($color) > 70) {
+                    color: $base-color;
+                } @else {
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    /* CLASS .BTN-{COLOR-THEME} */
+    @each $class, $color in $var-color-theme {
+        .btn-#{$class} {
+            background-color: $color;
+            border-color:  $color;
+            @if (lightness($color) > 70) {
+                color: $base-color;
+            } @else {
+                color: $white;
+            }
+            &:hover {
+                background-color: darken($color, 5%);
+                @if (lightness($color) > 70 or $class == "white" or $class == "off-white") {
+                    color: $base-color;
+                } @else {
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    /* DROPDOWN & HOVER BUTTON */
+    .dropdown-button, .hover-button {
+        position: relative;
+        padding: $space-content 0;
+        display: inline-block;
+        .content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            padding: $gutter;
+            border: 1px solid $grey;
+            background-color: $white;
+            z-index: 1;
+            width: 30rem;
+            &.bottom-right {
+                top: 100%;
+                right: 0;
+                left: auto;
+            }
+            &.top-right {
+                top: auto;
+                right: 0;
+                left: auto;
+                bottom: 100%;
+            }
+            &.top-left {
+                top: auto;
+                bottom: 100%;
+            }
+        }
+        &.opened {
+            .content {
+                display: block;
+            }
+        }
+    }
+
+    .hover-button:hover {
+        .content {
+            display: block;
+        }
+    }
+
+    @each $class, $color in $var-colors {
+        .button-group--#{$class} {
+            background-color: $color;
+            border-color: $color;
+            padding: 0;
+            cursor: pointer;
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 1.2rem;
+            display: inline-flex;
+            > *, > *:hover {
+                @if (lightness($color) > 70) {
+                    color: $base-color;
+                } @else {
+                    color: $white;
+                }
+            }
+            > * {
+                padding: 1.5rem 2.5rem;
+                display: inline-block;
+                + * {
+                    border-left-width: 1px;
+                    border-left-style: solid;
+                    border-left-color: darken($color, 10%);
+                }
+                &:hover {
+                    background-color: darken($color, 10%);
+                }
+            }
+        }
+    }
+}

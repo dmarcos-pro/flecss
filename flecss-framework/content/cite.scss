@@ -1,0 +1,26 @@
+/* TAG CITE */
+cite {
+    position: relative;
+    @extend %content-space--xl;
+    padding: $gutter;
+    display: block;
+    &::before {
+        content: "";
+        background-image: url($path-img + "quotation-marks.png");
+        background-size: cover;
+        width: 5rem;
+        height: 5rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: .1;
+    }
+    .author {
+        font-weight: bold;
+        display: block;
+        margin-top: $space-content;
+        text-transform: uppercase;
+        font-size: .8em;
+        font-style: normal;
+    }
+}

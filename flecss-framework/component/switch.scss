@@ -1,0 +1,36 @@
+@if ($switch-component) {
+	.switch {
+		border: 1px solid $grey;
+		height: 3.8rem;
+		position: relative;
+		width: 6.8rem;
+		border-radius: 5rem;
+		display: flex;
+		input {
+			flex: 1 0 auto;
+			margin: 0;
+			height: 3.8rem;
+			position: relative;
+			z-index: 2;
+			opacity: 0;
+			cursor: pointer;
+		}
+		span {
+			width: 3rem;
+			height: 3rem;
+			border-radius: 50%;
+			position: absolute;
+			top: .3rem;
+			left: .3rem;
+			z-index: 1;
+			background-color: $grey;
+		}
+		&.on {
+			span {
+				left: auto;
+				right: .3rem;
+				background-color: $primary-color;
+			}
+		}
+	}
+}
