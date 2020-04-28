@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+        <link rel="stylesheet" href="dist/app.css">
+    </head>
+    <body>
+<section>
+    <div class="wrapper">
+        <h2>La navigation</h2>
+        <p>Par défaut la navigation est horizontale avec un alignement du menu à droite. Pour obtenir ce rendu il suffit d'entourer le menu avec la balise &lt;nav>&lt;/nav> (Voir le code ci-dessous)</p>
+        <p>Le menu peut contenir des niveaux imbriqués. Dans ce cas ne pas oublier d'ajouter une icône &lt;i class="icon-angle-down">&lt;/i>.</p>
+        <p>Pour que votre menu soit centré ou à gauche, il suffit d'ajouter --center &lt;nav class="nav--center">&lt;/nav> ou --left &lt;nav class="nav--left">&lt;/nav>.</p>
+        <p>Le positionnement et l'alignement du texte des niveaux imbriqués coîncident avec le positionnement de votre navigation.</p>
+        <p><em><strong>Exemple</strong> : Si votre menu est aligné à droite (par défaut), alors les éléments du sous-menu seront positionnés en bas à droite de l'élement parent.</em></p>
+        <h3>La navigation par défaut (alignement à droite)</h3>
+        <nav>
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li class="selected"><a href="#">Item 1</a></li>
+                <li><a href="#">Item 2 <i class="icon-angle-down"></i></a>
+                    <ul>
+                        <li><a href="#">Item 2.1</a></li>
+                        <li><a href="#">Item 2.2</a></li>
+                        <li><a href="#">Item 2.3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Item 3</a></li>
+            </ul>
+        </nav>
+<pre data-value="language-markup">
+<code>
+&lt;nav>
+  &lt;ul>
+    &lt;li>&lt;a href="#">Accueil&lt;/a>&lt;/li>
+    &lt;li class="selected">&lt;a href="#">Item 1&lt;/a>&lt;/li>
+    &lt;li>&lt;a href="#">Item 2 &lt;i class="icon-angle-down">&lt;/i>&lt;/a>
+      &lt;ul>
+        &lt;li>&lt;a href="#">Item 2.1&lt;/a>&lt;/li>
+        &lt;li>&lt;a href="#">Item 2.2&lt;/a>&lt;/li>
+        &lt;li>&lt;a href="#">Item 2.3&lt;/a>&lt;/li>
+      &lt;/ul>
+    &lt;/li>
+    &lt;li>&lt;a href="#">Item 3&lt;/a>&lt;/li>
+  &lt;/ul>
+&lt;/nav>
+</code>
+</pre>
+        <h3>La navigation au centre</h3>
+        <nav class="nav--center">
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li class="selected"><a href="#">Item 1</a></li>
+                <li><a href="#">Item 2<i class="icon-angle-down"></i></a>
+                    <ul>
+                        <li><a href="#">Item 2.1</a></li>
+                        <li><a href="#">Item 2.2</a></li>
+                        <li><a href="#">Item 2.3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Item 3</a></li>
+            </ul>
+        </nav>
+<pre data-value="language-markup">
+<code>
+&lt;nav class="nav--center">
+    ...
+&lt;/nav>
+</code>
+</pre>
+        <h3>La navigation à gauche</h3>
+        <nav class="nav--left">
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li class="selected"><a href="#">Item 1</a></li>
+                <li><a href="#">Item 2<i class="icon-angle-down"></i></a>
+                    <ul>
+                        <li><a href="#">Item 2.1</a></li>
+                        <li><a href="#">Item 2.2</a></li>
+                        <li><a href="#">Item 2.3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Item 3</a></li>
+            </ul>
+        </nav>
+<pre data-value="language-markup">
+<code>
+&lt;nav class="nav--left">
+    ...
+&lt;/nav>
+</code>
+</pre>
+    </div>
+</section>
+<section>
+    <div class="wrapper">
+        <h2>Le fil d'ariane</h2>
+    </div>
+    <div class="breadcrumbs">
+        <div class="wrapper">
+            <a href="#">Accueil</a><i class="icon-angle-right"></i>
+            <a href="#">Catégorie</a><i class="icon-angle-right"></i>
+            <span>Titre de la page</span>
+        </div>
+    </div>
+    <div class="wrapper">
+        <pre data-value="language-markup">
+        <code>
+        &lt;div class="breadcrumbs">
+            &lt;div class="wrapper">
+                &lt;a href="#">Accueil&lt;/a>&lt;i class="icon-angle-right">&lt;/i>
+                &lt;a href="#">Catégorie&lt;/a>&lt;i class="icon-angle-right">&lt;/i>
+                &lt;span>Titre de la page&lt;/span>
+            &lt;/div>
+        &lt;/div>
+        </code>
+        </pre>
+    </div>
+</section>
+        <section>
+            <div class="wrapper">
+                <div class="flexgrid-2 has-gutter">
+                    <div>
+                        <form>
+                            <fieldset>
+                                <label for="">Nom</label>
+                                <input type="text" placeholder="nom">
+                            </fieldset>
+                            <fieldset class="error">
+                                <label for="">Nom</label>
+                                <input type="text" placeholder="nom">
+                                <p class="txt-error">Ceci est une erreur !</p>
+                            </fieldset>
+                            <fieldset>
+                                <label for="">Message</label>
+                                <textarea></textarea>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div>
+                        <form class="border">
+                            <fieldset>
+                                <legend>Radio</legend>
+                                <label class="inline"><input type="radio" name="radio">Option 1</label>
+                                <label class="inline"><input type="radio" name="radio">Option 2</label>
+                            </fieldset>
+                            <fieldset>
+                                <label>Pays</label>
+                                <select>
+                                    <option value="">Choisir un pays</option>
+                                    <option value="">France</option>
+                                    <option value="">Espagne</option>
+                                    <option value="">Italie</option>
+                                </select>
+                                <i class="select-icon icon-angle-down"></i>
+                            </fieldset>
+                            <fieldset class="validate">
+                                <label>Pays</label>
+                                <select name="">
+                                    <option value="">Choisir un pays</option>
+                                    <option value="" selected>France</option>
+                                    <option value="">Espagne</option>
+                                    <option value="">Italie</option>
+                                </select>
+                                <i class="icon-angle-down"></i>
+                            </fieldset>
+                            <fieldset>
+                                <legend>Checkbox</legend>
+                                <label class="inline"><input type="checkbox" name="checkbox">Option 1</label>
+                                <label class="inline"><input type="checkbox" name="checkbox">Option 2</label>
+                            </fieldset>
+                            <fieldset>
+                                <label>Rechercher sur le site</label>
+                                <input type="search">
+                                <i class="icon-search"></i>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+                <div class="tabs">
+                    <div class="items">
+                        <div class="item selected" data-index="0">Tab 1</div>
+                        <div class="item" data-index="1">Tab 2</div>
+                        <div class="item" data-index="2">Tab 3 avec option</div>
+                        <div class="item" data-index="3">Tab 4</div>
+                    </div>
+                    <div class="content">
+                        <div class="item"><p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</p></div>
+                        <div class="item hide">Texte Tab 2</div>
+                        <div class="item hide">Texte Tab 3</div>
+                        <div class="item hide">Texte Tab 4</div>
+                    </div>
+                </div>
+                <hr>
+                <div class="divider">
+                    <span class="badge">Tag</span>
+                    <span class="badge radius bgc-blue">Tag</span>
+                    <span class="badge bgc-red">Tag</span>
+                </div>
+                <div class="dropdown-button">
+                    <span class="btn">
+                        Dropdown
+                        <i class="icon-arrow-down"></i>
+                    </span>
+                    <div class="content bottom-right">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae est quaerat tenetur vel, ad? Nihil, ipsam dolorum. Eligendi facere ab modi enim quasi amet, sit eos sequi. Iusto, natus, cupiditate?
+                    </div>
+                </div>
+                <div class="hover-button">
+                    <span class="btn">
+                        Hover
+                        <i class="icon-arrow-down"></i>
+                    </span>
+                    <div class="content bottom-left">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae est quaerat tenetur vel, ad? Nihil, ipsam dolorum. Eligendi facere ab modi enim quasi amet, sit eos sequi. Iusto, natus, cupiditate?
+                    </div>
+                </div>
+
+                <div class="flexgrid-3 has-gutter section">
+                    <div>
+                        <div class="card--small bgc-third">
+                            <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="card">
+                            <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</p>
+                            <a href="#" class="link">Link more</a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="card--large">
+                            <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="card">
+                            <figure>
+                                <i class="icon-desktop"></i>
+                            </figure>
+                            <div>
+                                <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</p>
+                                <a href="#" class="link">Link more</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-8">
+                        <div class="card--left">
+                            <figure>
+                                <img src="http://placehold.it/100x100">
+                            </figure>
+                            <div>
+                                <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</p>
+                                <a href="#" class="link">Link more</a>
+                            </div>
+                        </div>
+                        <div class="card--left-top">
+                            <figure>
+                                <img src="http://placehold.it/100x100">
+                            </figure>
+                            <div>
+                                <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</p>
+                                <a href="#" class="link">Link more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="divider">
+                    <span class="btn">Bouton</span>
+                    <span class="btn-red border">Bouton</span>
+                    <span class="btn-third">Bouton</span>
+                    <div class="switch">
+                        <input type="radio" name="switch" value="0">
+                        <input type="radio" name="switch" value="1">
+                        <span></span>
+                    </div>
+                    <div class="button-group--red">
+                        <a href="#">Bouton</a>
+                        <a href="#">Bouton</a>
+                        <a href="#">Bouton</a>
+                    </div>
+                </div>
+                <div class="divider--xl">
+                    <span class="btn full">Bouton full</span>
+                </div>
+                <div class="flexgrid-3 has-gutter">
+                    <div>
+                        <figure>
+                            <img src="http://placehold.it/320x100">
+                            <figcaption>
+                                Texte en dessous de l'image
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div>
+                        <figure>
+                            <img src="http://placehold.it/320x100">
+                            <figcaption class="copyright">
+                                Texte en bas à l'intérieur
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div>
+                        <figure>
+                            <img src="http://placehold.it/320x100">
+                            <figcaption class="copyright top">
+                                Texte en haut à l'intérieur
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="parallax">
+            <div class="okok" speed="1.9" align="left"></div>
+            <div class="oui" speed="1.2" align="right"></div>
+        </div>
+        <section>
+            <div class="wrapper">
+                <p class="txt-left">Ce texte est par défaut ou "reset" à gauche !</p>
+                <p class="txt-center">Ce texte est centré !</p>
+                <p class="txt-right">Ce texte est à droite !</p>
+                <p>Texte par défaut !</p>
+                <p class="txt-sm">Ce texte est petit !</p>
+                <p class="txt-xl">Ce texte est grand !</p>
+                <p class="hide-for-tablet">Ce texte ne sera pas visible à partir de la version tablette</p>
+                <p class="hide-for-tablet--only">Ce texte ne sera pas visible sur la version tablette</p>
+                <article class="flexgrid-2 has-gutter">
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                    </ul>
+                    <ul class="bullet">
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                    </ul>
+                    <ul class="angle">
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                    </ul>
+                    <ol>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                    </ol>
+                    <div>
+                        <ul class="collection">
+                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="collection">
+                            <div>
+                                <a>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <i class="icon-angle-right"></i></a>
+                            </div>
+                            <div>
+                                <a>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<i class="icon-arrow-right"></i></a>
+                            </div>
+                            <div>
+                                <a>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
+                            </div>
+                            <div>
+                                <a>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <span class="badge bgc-red">New</span></a>
+                            </div>
+                            <div>
+                                <a class="active">Lorem ipsum dolor sit amet, consectetur adipisicing eat.</a>
+                            </div>
+                            <div>
+                                <a>Lorem ipsum dolor sit amet, consectetur adipisicing eat.</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <blockquote>
+                    <cite>Ceci est un tag cite dans un blockquote</cite>
+                    <p>Ceci est un blockquote avec du texte Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae odit minus laudantium iure recusandae, tenetur velit sit praesentium id facilis maxime modi blanditiis ab, voluptatem? Aliquid ea perspiciatis minus rem!</p>
+                </blockquote>
+                <note>
+                    <cite>Ceci est un tag cite dans une note</cite>
+                    <p>Ceci est une note avec du texte Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae odit minus laudantium iure recusandae, tenetur velit sit praesentium id facilis maxime modi blanditiis ab, voluptatem? Aliquid ea perspiciatis minus rem!</p>
+                </note>
+                <cite>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias inventore numquam nulla repellat sit, ipsa? Minima saepe tenetur ea blanditiis quas, eos beatae, vero ex, nam, modi voluptates asperiores hic.
+                    <span class="author">David Marcos</span>
+                </cite>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Titre 1</th>
+                            <th>Titre 2</th>
+                            <th>Titre 3</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Ligne 1</td>
+                            <td>Ligne 1</td>
+                            <td>Ligne 1</td>
+                        </tr>
+                        <tr>
+                            <td>Ligne 2</td>
+                            <td>Ligne 2</td>
+                            <td>Ligne 2</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="empty"></th>
+                            <th>Titre 1</th>
+                            <th>Titre 2</th>
+                            <th>Titre 3</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>Titre Ligne 1</th>
+                            <td>Ligne 1</td>
+                            <td>Ligne 1</td>
+                            <td>Ligne 1</td>
+                        </tr>
+                        <tr>
+                            <th>Titre Ligne 2</th>
+                            <td>Ligne 2</td>
+                            <td>Ligne 2</td>
+                            <td>Ligne 2</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <hr>
+                <div class="flexgrid-8 has-gutter">
+                    <i class="icon-share"></i>
+                    <i class="icon-angle-right"></i>
+                    <i class="icon-angle-left"></i>
+                    <i class="icon-angle-up"></i>
+                    <i class="icon-angle-down"></i>
+                    <i class="icon-close"></i>
+                    <i class="icon-locator"></i>
+                    <i class="icon-check"></i>
+                    <i class="icon-store"></i>
+                    <i class="icon-truck"></i>
+                    <i class="icon-certificate"></i>
+                    <i class="icon-box-open"></i>
+                    <i class="icon-lock"></i>
+                    <i class="icon-arrow-down"></i>
+                    <i class="icon-arrow-left"></i>
+                    <i class="icon-arrow-right"></i>
+                    <i class="icon-arrow-up"></i>
+                    <i class="icon-paperplane"></i>
+                    <i class="icon-pen"></i>
+                    <i class="icon-desktop"></i>
+                    <i class="icon-camera"></i>
+                    <i class="icon-secure"></i>
+                    <i class="icon-responsive"></i>
+                    <i class="icon-animation"></i>
+                    <i class="icon-download"></i>
+                    <i class="icon-perf"></i>
+                    <i class="icon-perso"></i>
+                    <i class="icon-easy"></i>
+                    <i class="icon-community"></i>
+                    <i class="icon-ellipsis"></i>
+                    <i class="icon-search"></i>
+                    <i class="icon-star"></i>
+                </div>
+                <hr>
+                <div class="toast-block">
+                    <div class="btn">Click toast</div>
+                    <div class="toast">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+                </div>
+                <hr>
+                <p>PROGRESS BAR</p>
+                <div class="progress-bar">
+                    <span></span>
+                </div>
+                <div class="pagination">
+                    <a href="#" class="previous">
+                        <i class="icon-arrow-left"></i>Page précédente
+                    </a>
+                    <div>
+                        <span class="selected">1</span>
+                        <span>2</span>
+                        <span>3</span>
+                    </div>
+                    <a href="#" class="next">
+                        Page suivante <i class="icon-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="pagination">
+                    <div class="previous disabled">
+                        <i class="icon-arrow-left"></i>Page précédente
+                    </div>
+                    <a href="#" class="next">
+                        Page suivante <i class="icon-arrow-right"></i>
+                    </a>
+                </div>
+                <!-- <div class="video-responsive">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/oRdxUFDoQe0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div> -->
+            </div>
+        </section>
+    </body>
+    <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="dist/app.js"></script>
+</html>

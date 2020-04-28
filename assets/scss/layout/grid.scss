@@ -1,0 +1,212 @@
+.grid {
+    display: flex;
+    flex-basis: 100%;
+    > * {
+        flex: 0 1 auto;
+    }
+}
+[class*='flexgrid-'] {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    @extend %content-space--xl;
+    > * {
+        flex: 0 1 auto;
+    }
+    &:first-child {
+        margin-top: 0;
+    }
+    &.align-center > * {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+    }
+}
+@for $i from 1 through $nb-column-laptop {
+    .flexgrid-#{$i} {
+        > * {
+            width: calc(100% / #{$i} - #{$ie});
+            @for $i from 1 through $nb-column-laptop {
+                &.col-#{$i} {
+                    width: calc(100% / (#{$nb-column-laptop} / #{$i}) - #{$ie});
+                }
+            }
+        }
+        &.has-gutter {
+            margin-right: - $gutter / 2;
+            margin-left: - $gutter / 2;
+            > * {
+                margin-top: $gutter;
+                padding-right: $gutter / 2;
+                padding-left: $gutter / 2;
+                &:nth-child(-n + #{$i}) {
+                    margin-top: 0;
+                }
+            }
+        }
+        &.has-gutter-xl {
+            margin-right: - $gutter;
+            margin-left: - $gutter;
+            > * {
+                margin-top: $gutter;
+                padding-right: $gutter;
+                padding-left: $gutter;
+                &:nth-child(-n + #{$i}) {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}
+@media (max-width: $desktop) {
+    @for $xl from 1 through $nb-column-desktop {
+        &.xl-#{$xl} {
+            > * {
+                width: calc(100% / #{$xl} - #{$ie});
+                &[class*='col-'] {
+                    width: calc(100% / #{$xl} - #{$ie});
+                }
+                @for $i from 1 through $nb-column-desktop {
+                    &.xl-col-#{$i} {
+                        width: calc(100% / (#{$nb-column-desktop} / #{$i}) - #{$ie});
+                    }
+                }
+            }
+            &.has-gutter > * {
+                &:nth-child(n) {
+                    margin-top: $gutter;
+                }
+                &:nth-child(-n + #{$xl}) {
+                    margin-top: 0;
+                }
+            }
+            &.has-gutter-xl > * {
+                &:nth-child(n) {
+                    margin-top: $gutter * 2;
+                }
+                &:nth-child(-n + #{$xl}) {
+                    margin-top: 0;
+                }
+            }
+        }
+        &.no-column-lg {
+            [class*='col-'] {
+                flex: 1 1 0;
+            }
+        }
+    }
+}
+@media (max-width: $laptop) {
+    @for $lg from 1 through $nb-column-laptop {
+        &.lg-#{$lg} {
+            > * {
+                width: calc(100% / #{$lg} - #{$ie});
+                &[class*='col-'] {
+                    width: calc(100% / #{$lg} - #{$ie});
+                }
+                @for $i from 1 through $nb-column-laptop {
+                    &.lg-col-#{$i} {
+                        width: calc(100% / (#{$nb-column-laptop} / #{$i}) - #{$ie});
+                    }
+                }
+            }
+            &.has-gutter > * {
+                &:nth-child(n) {
+                    margin-top: $gutter;
+                }
+                &:nth-child(-n + #{$lg}) {
+                    margin-top: 0;
+                }
+            }
+            &.has-gutter-xl > * {
+                &:nth-child(n) {
+                    margin-top: $gutter * 2;
+                }
+                &:nth-child(-n + #{$lg}) {
+                    margin-top: 0;
+                }
+            }
+        }
+        &.no-column-lg {
+            [class*='col-'] {
+                flex: 1 1 0;
+            }
+        }
+    }
+}
+@media (max-width: $tablet) {
+    @for $md from 1 through $nb-column-tablet {
+        &.md-#{$md} {
+            > * {
+                width: calc(100% / #{$md} - #{$ie});
+                &[class*='col-'] {
+                    width: calc(100% / #{$md} - #{$ie});
+                }
+                @for $i from 1 through $nb-column-tablet {
+                    &.md-col-#{$i} {
+                        width: calc(100% / (#{$nb-column-tablet} / #{$i}) - #{$ie});
+                    }
+                }
+            }
+            &.has-gutter > * {
+                &:nth-child(n) {
+                    margin-top: $gutter;
+                }
+                &:nth-child(-n + #{$md}) {
+                    margin-top: 0;
+                }
+            }
+            &.has-gutter-xl > * {
+                &:nth-child(n) {
+                    margin-top: $gutter * 2;
+                }
+                &:nth-child(-n + #{$md}) {
+                    margin-top: 0;
+                }
+            }
+        }
+        &.no-column-md {
+            [class*='md-col-'] {
+                flex: 1 1 0;
+            }
+        }
+    }
+}
+@media (max-width: $mobile) {
+    @for $sm from 1 through $nb-column-mobile {
+        &.sm-#{$sm} {
+            > * {
+                width: calc(100% / #{$sm} - #{$ie});
+                &[class*='col-'] {
+                    width: calc(100% / #{$sm} - #{$ie});
+                }
+                @for $i from 1 through $nb-column-mobile {
+                    &.sm-col-#{$i} {
+                        width: calc(100% / (#{$nb-column-mobile} / #{$i}) - #{$ie});
+                    }
+                }
+            }
+            &.has-gutter > * {
+                &:nth-child(n) {
+                    margin-top: $gutter;
+                }
+                &:nth-child(-n + #{$sm}) {
+                    margin-top: 0;
+                }
+            }
+            &.has-gutter-xl > * {
+                &:nth-child(n) {
+                    margin-top: $gutter * 2;
+                }
+                &:nth-child(-n + #{$sm}) {
+                    margin-top: 0;
+                }
+            }
+        }
+        &.no-column-sm {
+            [class*='col-'] {
+                flex: 1 1 0;
+            }
+        }
+    }
+}

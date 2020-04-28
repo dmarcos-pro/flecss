@@ -1,0 +1,144 @@
+/**
+ * --------------------------------------------
+ * SUMMARY
+ * --------------------------------------------
+ *      FORM
+ *      FIELDSET
+ *      LABEL & LEGEND
+ *      GLOBAL INPUT SELECT TEXTAREA
+ *      INPUT
+ *      SELECT
+ *      TEXTAREA
+ *      ICONE
+ * --------------------------------------------
+ */
+
+/* FORM */
+form {
+    max-width: $wrapper;
+    @extend %content-space--xl;
+    &.border {
+        padding: $gutter;
+        border: 1px solid $grey;
+        background-color: $white;
+    }
+}
+
+/* FIELDSET */
+fieldset {
+    padding: 0;
+    border: none;
+    @extend %content-space--xl;
+    .txt-error {
+        display: none;
+    }
+    &.error {
+        select,
+        input,
+        textarea {
+            border-color: $error;
+        }
+        label {
+            color: $error;
+        }
+        .txt-error {
+            display: block;
+            font-size: .8em;
+            color: $error;
+        }
+    }
+    &.validate {
+        select,
+        input,
+        textarea {
+            border-color: $validate;
+        }
+        label {
+            color: $validate;
+        }
+    }
+}
+
+/* LABEL & LEGEND */
+label {
+    position: relative;
+    display: block;
+    width: 100%;
+    text-transform: uppercase;
+    font-size: .8em;
+    &.inline {
+        width: auto;
+        display: inline-block;
+        margin-right: $space-content;;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+legend {
+    margin-bottom: $space-content;;
+    text-transform: uppercase;
+    font-size: .8em;
+}
+
+/* GLOBAL INPUT SELECT TEXTAREA */
+select,
+input,
+textarea {
+    width: 100%;
+    padding: 1.5rem $space-content--xl;
+    border: 1px solid $grey;
+    border-radius: 1rem;
+    font-size: $base-fs;
+    background-color: $white;
+    margin-top: $space-content;
+    font-family: $base-ff;
+    @extend %content-space;
+    &:focus {
+        outline-style: none;
+        border-color: $focus;
+    }
+}
+/* INPUT */
+input[type='number'] {
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    appearance: none;
+}
+input[type='radio'], input[type='checkbox'] {
+    width: 2rem;
+    margin: 0 .5rem 0 0;
+}
+input[type='submit'] {
+    border: none;
+}
+input[type='search'] {
+    padding-right: 5rem;
+}
+input:-webkit-autofill {
+    box-shadow: 0 0 0 50px $white inset;
+}
+
+/* SELECT */
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* TEXTAREA */
+textarea {
+    resize: vertical;
+    min-height: 20rem;
+}
+
+/* ICONE */
+fieldset {
+    i {
+        position: relative;
+        float: right;
+        margin-top: -4rem;
+        margin-right: 2rem;
+        font-size: 2rem;
+    }
+}

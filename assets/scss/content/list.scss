@@ -1,0 +1,95 @@
+/**
+ * --------------------------------------------
+ * SUMMARY
+ * --------------------------------------------
+ *      GLOBAL UL & OL
+ *      UL & OL IN ARTICLE
+ *      UL COLLECTION
+ * --------------------------------------------
+ */
+
+/* GLOBAL UL & OL */
+ul, ol {
+    list-style: none;
+    list-style-image: none;
+    padding: 0;
+    @extend %content-space--xl;
+    @at-root nav & {
+        margin-top: 0;
+    }
+}
+
+/* UL & OL IN ARTICLE */
+article {
+    ul , ol {
+        @extend %content-space;
+        padding: 0 0 0 $space-content;
+        li {
+            @extend %content-space;
+        }
+    }
+    ul {
+        li {
+            padding-left: $space-content;
+            position: relative;
+            &::before {
+                content: "- ";
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+        &.bullet li::before {
+            content: "• ";
+        }
+        &.angle li::before {
+            width: auto;
+            font-family: $ff-icon;
+            content: '\f105' ' ';
+        }
+    }
+    ol {
+        counter-reset: puces;
+        > li {
+            counter-increment: puces;
+            padding-left: 2.5rem;
+            position: relative;
+            &::before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                margin-right: .5rem;
+                content: counter(puces, decimal-leading-zero) '.';
+            }
+        }
+    }
+}
+
+/* UL COLLECTION */
+.collection {
+    padding: 0;
+    border: 1px solid $grey;
+    li {
+        padding: $space-content;
+        margin: 0;
+        &::before {
+            display: none;
+        }
+    }
+    a {
+        padding: $space-content;
+        display: block;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &.active {
+            @include bgc($primary-color);
+        }
+        &:not(.active):hover {
+            @include bgc($grey);
+        }
+    }
+    > * + * {
+        border-top: 1px solid $grey;
+    }
+}

@@ -1,0 +1,58 @@
+@if ($card-component) {
+    /**
+     * --------------------------------------------
+     * SUMMARY
+     * --------------------------------------------
+     *      GLOBAL CARD
+     *      SIZE CARD
+     * --------------------------------------------
+     */
+
+    /* GLOBAL CARD */
+    [class*='card'] {
+        @extend %content-space--xl;
+        border: 1px solid $grey;
+        padding: $gutter;
+        i {
+            font-size: 5rem;
+        }
+        &[class*='--left'] {
+            display: flex;
+            align-items: center;
+            figure {
+                margin-right: $gutter;
+                flex: 1 0 10rem;
+                text-align: center;
+                border-radius: 50%;
+                overflow: hidden;
+                + * {
+                    margin-top: 0;
+                }
+            }
+            &[class*='-top'] {
+                align-items: flex-start;
+            }
+        }
+        [class*='link'] {
+            padding-top: $gutter;
+            margin-top: $gutter;
+            border-top: 1px solid $grey;
+            text-transform: uppercase;
+            display: block;
+            color: $secondary-color;
+            &:hover {
+                color: $third-color;
+            }
+        }
+    }
+
+    /* SIZE CARD */
+    .card {
+        &--small {
+            padding: $gutter-sm;
+        }
+        &--large {
+            padding: $gutter-xl;
+        }
+    }
+}

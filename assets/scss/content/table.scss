@@ -1,0 +1,45 @@
+/* TABLE - CLASS PARENT RESPONSIVE */
+.table-responsive {
+    overflow-x: auto;
+    table {
+        table-layout: auto;
+    }
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    border-bottom: 1px solid $grey;
+    @extend %content-space--xl;
+    thead {
+        th {
+            @include bgc($blue_dark2);
+            padding: $space-content;
+            &:not(.empty) {
+                border: 1px solid $primary-color;
+            }
+        }
+    }
+    tbody {
+        tr {
+            background-color: $white;
+            th {
+                font-family: $base-ff--bold;
+                @include bgc($grey_dark2);
+            }
+            th, td {
+                padding: $space-content;;
+                font-weight: bold;
+                text-align: center;
+                border: 1px solid $grey;
+            }
+            &:nth-child(even) {
+                @include bgc($grey_light3);
+            }
+        }
+    }
+    .empty {
+        background-color: $body-bgc;
+    }
+}

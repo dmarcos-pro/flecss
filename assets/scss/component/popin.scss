@@ -1,0 +1,57 @@
+@if ($popin-component) {
+    /* POPIN */
+    .popin {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        transition: all .5s ease-in-out 0s;
+        background-color: rgba(0, 0, 0, .3);
+        opacity: 0;
+        z-index: -1;
+        &.open {
+            opacity: 1;
+            z-index: $zi-popin;
+        }
+        &-head {
+            position: relative;
+            padding: $gutter;
+            background-color: darken($primary-color, 20%);
+            color: $white;
+            box-shadow: none;
+            p {
+                text-transform: uppercase;
+                font-family: $head-ff;
+            }
+        }
+        &-content {
+            padding: $gutter;
+            padding-top: $gutter-xl;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: $white;
+            max-width: $wrapper;
+            width: calc(100% - #{$gutter-xl});
+            .close {
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+                cursor: pointer;
+            }
+        }
+    }
+    /* TOAST */
+    .toast {
+        position: fixed;
+        bottom: -100%;
+        right: $gutter;
+        padding: $gutter;
+        @include bgc($secondary-color);
+        border-radius: .5rem;
+        transition: all .5s cubic-bezier(0,1.39,1,1.06) 0s;
+        max-width: 50%;
+    }
+}
