@@ -69,8 +69,3 @@ for (let i = 0; i < toastBlock.length; i++) {
 
     });
 }
-
-// window.addEventListener('click', (event) => {
-//     document.querySelector('.bulle').style.top = event.pageY - 25 + "px";
-//     document.querySelector('.bulle').style.left = event.pageX - 25 + "px";
-// });

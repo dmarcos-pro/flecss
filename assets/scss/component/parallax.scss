@@ -1,16 +1,18 @@
 @if ($parallax-component) {
     .okok {
-        @include parallax('https://www.beckett.design/images/grafikdesign/glass1.png');
+        @include parallax('http://localhost:8888/dmarcos/wp-content/uploads/2020/04/Sans-titre-1-1.png') {
+            background-repeat: no-repeat;
+        }
     }
-    .oui {
-        @include parallax('http://localhost:8888/dmarcos/wp-content/uploads/2020/04/bulle.png');
-    }
+    // .oui {
+    //     @include parallax('http://localhost:8888/dmarcos/wp-content/uploads/2020/04/Capture-d’écran-2020-04-28-à-19.53.14.png');
+    // }
     .parallax {
         position: relative;
-        background-attachment: fixed;
+        // background-attachment: fixed;
         background-position: center 0;
         background-repeat: no-repeat;
         height: 80rem;
-        background-image: url('https://dmarcos.fr/wp-content/uploads/2018/11/dmarcos-fd-noir.gif');
+        background-image: url('http://localhost:8888/dmarcos/wp-content/uploads/2020/04/Capture-d’écran-2020-04-28-à-19.53.14.png');
     }
 }

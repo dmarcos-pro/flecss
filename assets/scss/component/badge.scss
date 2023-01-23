@@ -13,3 +13,60 @@
         }
     }
 }
+
+.mouse {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background-color: $black;
+    transform: translate(-50%, -50%);
+    &::before {
+        display: block;
+        content: "";
+        width: 6rem;
+        height: 6rem;
+        position: relative;
+        top: -6px;
+        left: -6px;
+        border: 1px solid $black;
+        border-radius: 50%;
+
+    }
+}
+#choice {
+    cursor: none;
+}
+.panel {
+    height: 100vh;
+    position: relative;
+    p {
+        width: 100vw;
+        position: absolute;
+        font-size: 7rem;
+        top: 50%;
+        left: 50%;
+        text-align: center;
+        transform: translate(-50%, -50%);
+        text-transform: uppercase;
+        z-index: -1;
+    }
+}
+.panel2 {
+    height: 100%;
+    width: 50%;
+    overflow: hidden;
+    position: relative;
+    span {
+        height: 100%;
+        width: 100vw;
+        text-align: center;
+        display: block;
+        font-size: 7rem;
+        text-transform: uppercase;
+    }
+}
